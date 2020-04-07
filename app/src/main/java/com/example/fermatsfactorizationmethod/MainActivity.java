@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private EditText input;
+    private EditText calcTime;
     private EditText endResult;
     private Button button;
 
@@ -21,14 +22,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void onButtonClick(View v) {
+        calcTime = findViewById(R.id.calcTime);
         endResult = findViewById(R.id.endResult);
         input = findViewById(R.id.number);
         button = findViewById(R.id.button);
 
         String result = factorize();
+        String resTime = calculateTime();
         endResult.setText(result);
+        calcTime.setText(resTime);
 
     }
+    long start = System.currentTimeMillis();
     public String factorize() {
         String result = "";
         String text = input.getText().toString();
@@ -64,5 +69,13 @@ public class MainActivity extends AppCompatActivity {
         result += " " + (square_root - b) + "," + (square_root + b) + " ";
         return result;
     }
-}
+    public String calculateTime(){
+        String resTime = "";
+        long end = System.currentTimeMillis();
+        //finding the time difference and converting it into seconds
+        float sec = (end - start) / 1000F;
+        resTime = sec + " seconds";
+        return resTime;
+    }
 
+}

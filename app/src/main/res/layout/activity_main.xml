@@ -13,14 +13,14 @@
             android:layout_width="262dp"
             android:layout_height="30dp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="215dp"
             android:text="Лабораторна робота №3-1"
             android:textSize="20dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/err"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.416"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.469" android:layout_marginBottom="115dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"/>
     <EditText
             android:id="@+id/number"
             android:layout_width="wrap_content"
@@ -36,19 +36,19 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
             android:text="Введіть число для факторизації: "
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="163dp"/>
+            android:layout_marginTop="48dp" app:layout_constraintTop_toBottomOf="@+id/textView"/>
     <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginLeft="28dp"
-            android:layout_marginTop="116dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="64dp"
             android:onClick="onButtonClick"
             android:text="Розрахувати"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
             android:layout_marginLeft="36dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="132dp"
             android:text="Результат (фактори):"
 
             android:textStyle="bold"
@@ -77,12 +77,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5"/>
     <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:text="Час виконання:"
+
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"/>
+    <EditText
+            android:id="@+id/calcTime"
+            android:layout_width="296dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="28dp" app:layout_constraintBottom_toTopOf="@+id/textView5"
+            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/textView6"/>
+    <TextView
             android:id="@+id/err"
             android:layout_width="291dp"
             android:layout_height="0dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginLeft="36dp"
-            android:layout_marginBottom="447dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="412dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
     />
